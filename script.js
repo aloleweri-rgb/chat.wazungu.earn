@@ -65,26 +65,13 @@ if (payButton) {
         payButton.style.opacity = '0.7';
 
         try {
-            // Replace these with your actual Payhero credentials
-            const PAYHERO_CHANNEL_ID = 8767; 
-            const PAYHERO_API_KEY = jS5KD5x6ibE2p1Y16f2q;
-            const PAYHERO_API_PASS = HppWXcKl6oWcQdtQYvUtd1GFZo4KV9bHMcP5jfrB;
-
-            // Payhero API Endpoint
-            const response = await fetch('https://backend.payhero.co.ke/api/v2/payments', {
+            // Call our local backend to avoid CORS and securely handle API keys
+            const response = await fetch('/api/pay', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Basic ' + btoa(PAYHERO_API_KEY + ':' + PAYHERO_API_PASS)
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    amount: 100,
-                    phone_number: phone,
-                    channel_id: PAYHERO_CHANNEL_ID,
-                    provider: 'm-pesa',
-                    external_reference: 'ACT-' + Date.now(),
-                    callback_url: 'https://chat-wazungu.vercel.app/callback' // Update with your actual callback URL
-                })
+                body: JSON.stringify({ phone: phone })
             });
 
             const data = await response.json();
