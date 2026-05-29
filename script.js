@@ -66,9 +66,9 @@ if (payButton) {
 
         try {
             // Replace these with your actual Payhero credentials
-            const PAYHERO_CHANNEL_ID = 'YOUR_CHANNEL_ID'; 
-            const PAYHERO_API_KEY = 'YOUR_API_KEY';
-            const PAYHERO_API_PASS = 'YOUR_API_PASSWORD';
+            const PAYHERO_CHANNEL_ID = 8767; 
+            const PAYHERO_API_KEY = jS5KD5x6ibE2p1Y16f2q;
+            const PAYHERO_API_PASS = HppWXcKl6oWcQdtQYvUtd1GFZo4KV9bHMcP5jfrB;
 
             // Payhero API Endpoint
             const response = await fetch('https://backend.payhero.co.ke/api/v2/payments', {
