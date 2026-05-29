@@ -38,6 +38,9 @@ app.post('/api/pay', async (req, res) => {
         });
 
         const data = await response.json();
+        console.log('--- PayHero Response ---');
+        console.log('Status:', response.status);
+        console.log('Response body:', data);
         res.json(data);
     } catch (error) {
         console.error('Payment Error:', error);
