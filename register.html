@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Na Wazungu - Create Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <div class="card">
+        <div class="card-header">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
+            </div>
+            <h2 class="site-title">CHAT NA WAZUNGU</h2>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="badges">
+                <span class="badge-invited"><span class="dot"></span> Invited by Mzunye</span>
+                <span class="badge-bonus">BONUS</span>
+            </div>
+
+            <h1 class="main-title">Create your account</h1>
+            <p class="subtitle">Join thousands earning daily</p>
+
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="username">USERNAME <span class="error-text" id="usernameError">⚠ Username is required</span></label>
+                    <div class="input-wrapper">
+                        <span class="prefix">@</span>
+                        <input type="text" id="username" placeholder="Your display name">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">EMAIL <span class="error-text" id="emailError">⚠ Enter a valid email</span></label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" placeholder="you@email.com">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="label-row">
+                        <label for="phone">PHONE <span class="error-text" id="phoneError">⚠ Enter a valid phone</span></label>
+                        <span class="badge-mpesa">M-PESA</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="tel" id="phone" placeholder="07XXXXXXXX">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="country">COUNTRY</label>
+                    <div class="input-wrapper">
+                        <select id="country">
+                            <option value="Kenya" selected>Kenya</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="South Africa">South Africa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">PASSWORD <span class="error-text" id="passwordError">⚠ At least 6 characters</span></label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" placeholder="Min. 6 characters">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account →</button>
+            </form>
+
+            <div class="footer-link">
+                Already have an account? <a href="#" class="sign-in-link">Sign in</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page-footer">
+        © 2026 Chat Na Wazungu · No-Refund Policy
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

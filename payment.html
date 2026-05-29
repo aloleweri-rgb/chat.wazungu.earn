@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Na Wazungu - Activate Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="payment-page">
+    <div class="background-glow"></div>
+    
+    <div class="logo-header-outside">
+        <div class="logo-container logo-container-large">
+            <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 11.5C21 16.1944 16.9706 20 12 20C10.6698 20 9.40693 19.7425 8.27218 19.2785L4.5 20.5L5.43854 16.745C3.92138 15.3526 3 13.5186 3 11.5C3 6.80558 7.02944 3 12 3C16.9706 3 21 6.80558 21 11.5Z" fill="url(#paint0_linear)"/>
+                <defs>
+                    <linearGradient id="paint0_linear" x1="4.5" y1="5" x2="21" y2="20.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#fff"/>
+                        <stop offset="1" stop-color="#e0e0e0" stop-opacity="0.8"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <h2 class="site-title" style="margin-bottom: 24px;">CHAT NA WAZUNGU</h2>
+        
+        <div class="split-progress-bar">
+            <div class="progress-segment filled"></div>
+            <div class="progress-segment unfilled"></div>
+        </div>
+    </div>
+
+    <div class="card payment-card">
+        <div class="card-body" style="padding-top: 24px;">
+            <div class="verification-fee-card">
+                <div class="fee-content">
+                    <div class="fee-label">VERIFICATION FEE</div>
+                    <div class="fee-amount">Ksh 100</div>
+                    <div class="fee-subtitle">One-time · Instant activation</div>
+                </div>
+                <div class="fee-circle-bg"></div>
+            </div>
+
+            <h1 class="main-title">Activate account</h1>
+            <p class="subtitle" style="margin-bottom: 24px;">Enter your M-PESA number below</p>
+
+            <form id="paymentForm">
+                <div class="input-group">
+                    <label for="mpesa-number">M-PESA NUMBER</label>
+                    <div class="input-wrapper mpesa-input-wrapper">
+                        <div class="input-icon-left">
+                            <span>📱</span>
+                        </div>
+                        <input type="tel" id="mpesa-number" value="0717238546">
+                    </div>
+                    <div class="input-helper">Accepts: 07XX · 01XX · 254XX · +254XX</div>
+                </div>
+
+                <div class="info-box">
+                    <span class="info-icon">🔒</span>
+                    <span class="info-text">Review details before M-PESA prompt is sent</span>
+                </div>
+
+                <button type="button" class="submit-btn" id="payButton">Pay Ksh 100 →</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="page-footer">
+        © 2026 Chat Na Wazungu · No-Refund Policy
+    </div>
+    
+    <script src="script.js?v=2"></script>
+</body>
+</html>
