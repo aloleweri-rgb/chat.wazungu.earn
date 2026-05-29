@@ -65,8 +65,8 @@ if (payButton) {
         payButton.style.opacity = '0.7';
 
         try {
-            // Call our local backend to avoid CORS and securely handle API keys
-            const response = await fetch('http://localhost:3000/api/pay', {
+            // Call the live Render backend
+            const response = await fetch('https://chatwazunguearn.onrender.com/api/pay', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
