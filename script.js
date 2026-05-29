@@ -1,50 +1,56 @@
-document.getElementById('registerForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    let isValid = true;
-    
-    const username = document.getElementById('username');
-    const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
-    const password = document.getElementById('password');
-    
-    // Reset errors
-    document.querySelectorAll('.input-group').forEach(group => {
-        group.classList.remove('error-active');
+const registerForm = document.getElementById('registerForm');
+if (registerForm) {
+    registerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        let isValid = true;
+        
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const password = document.getElementById('password');
+        
+        // Reset errors
+        document.querySelectorAll('.input-group').forEach(group => {
+            group.classList.remove('error-active');
+        });
+
+        if (!username.value.trim()) {
+            username.closest('.input-group').classList.add('error-active');
+            isValid = false;
+        }
+
+        if (!email.value.trim() || !email.value.includes('@')) {
+            email.closest('.input-group').classList.add('error-active');
+            isValid = false;
+        }
+
+        const phoneValue = phone.value.trim();
+        if (!phoneValue || !(phoneValue.startsWith('07') || phoneValue.startsWith('01')) || phoneValue.length < 10) {
+            phone.closest('.input-group').classList.add('error-active');
+            isValid = false;
+        }
+
+        if (!password.value.trim() || password.value.length < 6) {
+            password.closest('.input-group').classList.add('error-active');
+            isValid = false;
+        }
+
+        if (isValid) {
+            // Proceed to the next step
+            window.location.href = 'payment.html';
+        }
     });
+}
 
-    if (!username.value.trim()) {
-        username.closest('.input-group').classList.add('error-active');
-        isValid = false;
-    }
-
-    if (!email.value.trim() || !email.value.includes('@')) {
-        email.closest('.input-group').classList.add('error-active');
-        isValid = false;
-    }
-
-    const phoneValue = phone.value.trim();
-    if (!phoneValue || !(phoneValue.startsWith('07') || phoneValue.startsWith('01')) || phoneValue.length < 10) {
-        phone.closest('.input-group').classList.add('error-active');
-        isValid = false;
-    }
-
-    if (!password.value.trim() || password.value.length < 6) {
-        password.closest('.input-group').classList.add('error-active');
-        isValid = false;
-    }
-
-    if (isValid) {
-        // Proceed to the next step
-        window.location.href = 'payment.html';
-    }
-});
-
-document.querySelector('.sign-in-link').addEventListener('click', function(e) {
-    e.preventDefault();
-    // Redirect to Sign in
-    window.location.href = 'signin.html';
-});
+const signInLink = document.querySelector('.sign-in-link');
+if (signInLink) {
+    signInLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Redirect to Sign in
+        window.location.href = 'signin.html';
+    });
+}
 
 // Payhero Integration
 const payButton = document.getElementById('payButton');
