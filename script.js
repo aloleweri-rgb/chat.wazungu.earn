@@ -66,7 +66,7 @@ if (payButton) {
 
         try {
             // Call our local backend to avoid CORS and securely handle API keys
-            const response = await fetch('/api/pay', {
+            const response = await fetch('http://localhost:3000/api/pay', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
